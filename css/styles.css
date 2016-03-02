@@ -1,0 +1,67 @@
+html { 
+  background: url('../files/skyline.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+	min-width: 100%;
+}
+
+body {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+ul#links {
+  padding: 0;
+}
+
+@media only screen and (max-width : 550px) {
+  h1{
+    font-size: 30px;
+  }
+  
+  h2{
+    font-size: 15px;
+  }
+
+  ul#links li {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width : 551px) {
+  h1{
+    font-size: 60px;
+  }
+  
+  h2{
+    font-size: 20px;
+  }
+  
+  ul#links li {
+    display: inline;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+ul#links li a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+  background: grey; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(grey, black); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(grey, black); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(grey, black); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(grey, black); /* Standard syntax */
+}
+
+ul#links li a:hover {
+  background: grey; /* For browsers that do not support gradients */
+}
