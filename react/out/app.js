@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -10,39 +10,57 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var e = React.createElement;
 
-var LikeButton = function (_React$Component) {
-  _inherits(LikeButton, _React$Component);
+var HomePage = function (_React$Component) {
+  _inherits(HomePage, _React$Component);
 
-  function LikeButton(props) {
-    _classCallCheck(this, LikeButton);
+  function HomePage() {
+    _classCallCheck(this, HomePage);
 
-    var _this = _possibleConstructorReturn(this, (LikeButton.__proto__ || Object.getPrototypeOf(LikeButton)).call(this, props));
-
-    _this.state = { liked: false };
-    return _this;
+    return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
   }
 
-  _createClass(LikeButton, [{
-    key: 'render',
+  _createClass(HomePage, [{
+    key: "render",
     value: function render() {
-      var _this2 = this;
-
-      if (this.state.liked) {
-        return 'You liked this.';
-      }
-
       return React.createElement(
-        'button',
-        { onClick: function onClick() {
-            return _this2.setState({ liked: true });
-          } },
-        'Like'
+        "div",
+        null,
+        React.createElement(
+          "h1",
+          null,
+          "Peter Argany"
+        ),
+        React.createElement(
+          "h2",
+          null,
+          "A Software Engineer at Facebook who enjoys a good game of football, exploring new places and writing sexy code"
+        ),
+        React.createElement(
+          "a",
+          { href: "https://ca.linkedin.com/in/peterargany" },
+          " LinkedIn"
+        ),
+        React.createElement(
+          "a",
+          { href: "https://github.com/PeteTheHeat" },
+          " Github"
+        ),
+        React.createElement(
+          "a",
+          { href: "https://www.instagram.com/petetheheat81/" },
+          " Instagram"
+        ),
+        React.createElement(
+          "a",
+          { href: "https://www.dropbox.com/s/yejnue6qrd7xq5l/Peter%20Argany%20Resume.pdf?dl=0" },
+          "Resume"
+        )
       );
     }
   }]);
 
-  return LikeButton;
+  return HomePage;
 }(React.Component);
 
-var domContainer = document.querySelector('#app_container');
-ReactDOM.render(e(LikeButton), domContainer);
+var domContainer = document.querySelector("#app_container");
+ReactDOM.render(e(HomePage), domContainer);
